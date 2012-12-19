@@ -64,23 +64,7 @@ describe User do
       it { should_not be_valid }
     end
     
-    describe "when password is not present" do
-      before { @user.password = @user.password_confirmation = "" }
-      it { should_not be_valid }
-    end
-    
-    describe "when password is not present" do
-      before { @user.password = @user.password_confirmation = " " }
-      it { should_not be_valid }
-    end
-  
-  
-    describe "when password doesn't match confirmation" do
-      before { @user.password_confirmation = "mismatch" }
-      it { should_not be_valid }
-    end
-    
-    describe "when password confirmation is nil" do
+    describe "when password is  en password confirmation is nil" do
       before { @user.password_confirmation = nil }
       it { should_not be_valid }
     end
