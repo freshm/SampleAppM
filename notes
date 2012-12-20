@@ -1,7 +1,44 @@
 To redo:
 9.3.4 Refactoring
 
-
+--------------------------------------------------------------------------
 -- add_admin_to_users - Konstruktion
 
   die Eigenschaft bleibt außerhalb der Modell logik(sicherheitsmaßnahme)
+
+erstellen durch: rails generate migration <name> - um es auf ein bestimmtes Model zu beziehen mit "to_<model-name>" beenden
+
+-------------------------------------------------------------------------
+-> target: '_blank' <-- öffnet link in neuem Fenster (z.B. <%= link_to "Insert smthg", path, target: '_blank' %> )
+
+bei <%= link to ... %> können werte(value, width, action, method, etc.) mit hashes eingefügt werden (value:, width:, action:, method:, etc.)
+
+<%= render 'render datei(fangen mit _ an(auch Partials genannt))', paramater(falls vorhanden) %> -- kann den inhalt der html's aufteilen
+----------------------------------------------------------------------------------
+Attribute eines Models kann man weglassen, wenn sie nicht über normalen weg(z.B. ausfüllen einer Form) bearbeitet werden,
+sondern nur auf Programmierebene. (einfach löschen des attributes(sicherstellen dass sie in die sql-tabelle eingefügt wird))
+-------------------------------------------------------------------------------------
+Has_many:
+"dependante: :destory" stellt sicher, dass alle Assoziationen einer Beziehung zerstört werden(nur von einer Seite aus)
+
+-----------------------------------------------------------------------------------------
+validates methoden
+-presence: boolena
+-length: { minimum/maximum: n }
+-------------------------------------------------------------------------------------------
+Pagination(1 Seite mit vielen Details -> viele Seiten mit wenig Details):
+Gemfile: 'will_paginate' (falls bootstrap, dann auch 'bootstrap-will_paginate')
+Gebrauch:
+Im Controller mit '@c_name = <Controllername>.paginate(page: <nummer>)' angeben
+Im View mit '<%= will_paginate @c_name %>'
+---------------------------------------------------------------------------------------------
+<%= @irgendwas %> benötigt die struktur views/irgendwas/_irgendwas.html.erb
+----------------------------------------------------------------------------------------
+Faker Gem um sachen zu simulieren (Namen, Lorum-Texte, etc.).
+----------------------------------------------------------------------------------------------------
+private methoden eines controllers können in einen helper ausgelagert werden.
+--------------------------------------------------------------------------------------------------------
+Html-Tags nachschauen:
+<aside>
+<section>
+<span>
