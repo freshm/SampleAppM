@@ -1,0 +1,7 @@
+To redo:
+9.3.4 Refactoring
+
+
+-- add_admin_to_users - Konstruktion
+
+  die Eigenschaft bleibt außerhalb der Modell logik(sicherheitsmaßnahme)
